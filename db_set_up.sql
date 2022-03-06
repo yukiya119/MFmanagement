@@ -1,0 +1,6 @@
+CREATE DATABASE IF NOT EXISTS mfm_db;
+
+CREATE USER IF NOT EXISTS mfm_admin
+    IDENTIFIED BY '0119';
+
+GRANT ALL ON mfm_db.* TO mfm_admin;
