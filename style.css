@@ -1,0 +1,166 @@
+@charset "UTF-8";
+
+/* 共通部分
+-----------------------------------*/
+html{
+    font-size: 100%;
+}
+body {
+    font-family: 'M PLUS 1', sans-serif;
+    /* font-family: 'Noto Sans JP', sans-serif; */
+    color: rgb(66, 69, 71);
+}
+h1 {
+    color: #ed2222;
+    margin-bottom: 50px;
+}
+h2 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style-position: inside;
+}
+li {
+    margin-bottom: 5px;
+    padding: 5px;
+}
+.wrapper {
+    width: 600px;
+    margin: 30px auto;
+    padding: 40px 50px;
+    border: 2px solid #dfdfdc;
+    border-radius: 20px;
+    background-color: #fff7f7;
+}
+.errors {
+    color: #ed2222;
+    background-color: #f0cdcd;
+    list-style: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+}
+
+フォーム
+input[type="text"] {
+    border: 2px solid #b8b4b4;
+    border-radius: 3px;
+    width: 100%;
+    padding: 10px;
+}
+ボタン
+.btn {
+    color: #fff;
+    border-radius: 5px;
+    text-align: center;
+}
+.btn:hover {
+    background-color:#93d8d0;
+}
+.submit-btn,
+.return-btn {
+    width: 100%;
+    margin-top: 20px;
+    padding: 5px 0;
+    letter-spacing: 1.5rem;
+    text-indent: 1.5rem;
+}
+.submit-btn {
+    background-color:#4394eb;
+}
+.return-btn {
+    display: block;
+    background-color:#f5b781;
+}
+.first-btn,
+.second-btn,
+.ambulance-btn,
+.tamura-btn {
+    font-size: 0.9rem;
+    margin-right: 3px;
+    padding: 5px;
+}
+.fist-btn {
+    background-color: #29cd70;
+}
+.second-btn {
+    background-color: rgb(47, 147, 240);
+}
+.ambulance-btn {
+    background-color: #f96262;
+}
+.tamura-btn {
+    background-color: #88109b;
+}
+.db-connect{
+    text-align: right;
+    margin: 0 0 0 auto;
+}
+.db-connect-confirmation {
+    text-align: right;
+    margin: 0 0 0 auto;
+    margin-bottom: 10px;
+    -webkit-animation: blink 1s ease-in-out infinite alternate;
+    animation: blink 1s ease-in-out infinite alternate;
+}
+    @-webkit-keyframes blink {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+    @keyframes blink {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+.member-list {
+    background-color: #fee9a4;
+}
+.first-unit {
+    /* color: #ed2222; */
+    margin-bottom: 50px;
+}
+.second-unit {
+    /* color: #ed2222; */
+    margin-bottom: 50px;
+}
+.ambulance-unit {
+    color: #4394eb;
+    margin-bottom: 50px;
+}
+.tamura-unit {
+    /* color: #f96262; */
+    margin-bottom: 50px;
+}
+.go_out {
+    color: aqua;
+    background-color: azure;
+    margin-bottom: 50px;
+}
+.exclusion {
+    color: #ed2222;
+    background-color: azure;
+    margin-bottom: 50px;
+}
+
+/* タスク一覧画面
+-----------------------------------*/ */
+
+/* タスク登録フォーム */
+.new-shift {
+    margin-bottom: 60px;
+}
+.done-shift h2 {
+    background: linear-gradient(transparent 70%, #fee9a4 70%);
+}
+
+完了タスク
+.done-shift h2 {
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+.done-shift h2 {
+    background: linear-gradient(transparent 70%, #edbbfa 70%0);
+}
