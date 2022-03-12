@@ -53,74 +53,181 @@ $find_exclusion = find_name_by_UNIT(UNIT_EXCLUSION);
         <div class="member-list">
             <h1>【西消防署】隊員編成管理</h1>
         </div>
+        <!-- ここから１線隊表示 -->
         <div class="first-unit">
             <h2>１線隊</h2>
-            <ul>
-                <?php foreach ($find_first as $first) : ?>
-                    <li>
-                        <a href="" class="btn second-btn">２</a>
-                        <a href="" class="btn ambulance-btn">救</a>
-                        <a href="" class="btn tamura-btn">田</a>
-                        <?= h($first['Class']) ?>
-                        <?= h($first['Name']) ?>
-                    </li>
-                <?php endforeach; ?>
-            </ul>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th colspan="5">ボタン</th>
+                        <th width="100">階級</th>
+                        <th width="100">氏名</th>
+                        <th colspan="2" width="150">資格</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php foreach ($find_first as $first) : ?>
+                        <tr align="center">
+                            <td><a href="" class="btn second-btn">２</a></td>
+                            <td><a href="" class="btn ambulance-btn">救</a></td>
+                            <td><a href="" class="btn tamura-btn">田</a></td>
+                            <td><a href="" class="btn go_out-btn">出</a></td>
+                            <td><a href="" class="btn exclusion-btn">休</a></td>
+                            <td><?= h($first['Class']) ?></td>
+                            <td><?= h($first['Name']) ?></td>
+                            <td><?= h($first['Qualification1']) ?></td>
+                            <td><?= h($first['Qualification2']) ?></td>
+                        </tr>
+                    <?php endforeach; ?>
+                </tbody>
+            </table>
         </div>
         <hr>
+        <!-- ここから２線隊表示 -->
         <div class="second-unit">
             <h2>２線隊</h2>
-            <?php foreach ($find_second as $second) : ?>
-                <li>
-                    <a href="" class="btn second-btn">１</a>
-                    <a href="" class="btn ambulance-btn">救</a>
-                    <a href="" class="btn tamura-btn">田</a>
-                    <?= h($second['Name']) ?>
-                </li>
-            <?php endforeach; ?>
-            </ul>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th colspan="5">ボタン</th>
+                        <th width="100">階級</th>
+                        <th width="100">氏名</th>
+                        <th colspan="2" width="150">資格</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php foreach ($find_second as $second) : ?>
+                        <tr align="center">
+                            <td><a href="" class="btn first-btn">１</a></td>
+                            <td><a href="" class="btn ambulance-btn">救</a></td>
+                            <td><a href="" class="btn tamura-btn">田</a></td>
+                            <td><a href="" class="btn go_out-btn">出</a></td>
+                            <td><a href="" class="btn exclusion-btn">休</a></td>
+                            <td><?= h($second['Class']) ?></td>
+                            <td><?= h($second['Name']) ?></td>
+                            <td><?= h($second['Qualification1']) ?></td>
+                            <td><?= h($second['Qualification2']) ?></td>
+                        </tr>
+                    <?php endforeach; ?>
+                </tbody>
+            </table>
         </div>
         <hr>
+        <!-- ここから救急隊表示 -->
         <div calss="ambulance-unit">
             <h2>救急隊</h2>
-            <?php foreach ($find_ambulance as $ambulance) : ?>
-                <li>
-                    <a href="" class="btn second-btn">１</a>
-                    <a href="" class="btn ambulance-btn">２</a>
-                    <a href="" class="btn tamura-btn">田</a>
-                    <?= h($ambulance['Name']) ?>
-                </li>
-            <?php endforeach; ?>
-            </ul>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th colspan="5">ボタン</th>
+                        <th width="100">階級</th>
+                        <th width="100">氏名</th>
+                        <th colspan="2" width="150">資格</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php foreach ($find_ambulance as $ambulance) : ?>
+                        <tr align="center">
+                            <td><a href="" class="btn first-btn">１</a></td>
+                            <td><a href="" class="btn second-btn">２</a></td>
+                            <td><a href="" class="btn tamura-btn">田</a></td>
+                            <td><a href="" class="btn go_out-btn">出</a></td>
+                            <td><a href="" class="btn exclusion-btn">休</a></td>
+                            <td><?= h($ambulance['Class']) ?></td>
+                            <td><?= h($ambulance['Name']) ?></td>
+                            <td><?= h($ambulance['Qualification1']) ?></td>
+                            <td><?= h($ambulance['Qualification2']) ?></td>
+                        </tr>
+                    <?php endforeach; ?>
+                </tbody>
+            </table>
         </div>
         <hr>
+        <!-- ここから田村隊表示 -->
         <div class="tamura-unit">
             <h2>田村町分遣所</h2>
-            <?php foreach ($find_tamura as $tamura) : ?>
-                <li>
-                    <a href="" class="btn second-btn">１</a>
-                    <a href="" class="btn ambulance-btn">２</a>
-                    <a href="" class="btn tamura-btn">救</a>
-                    <?= h($tamura['Name']) ?>
-                </li>
-            <?php endforeach; ?>
-            </ul>
-
-            <!-- </div>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th colspan="5">ボタン</th>
+                        <th width="100">階級</th>
+                        <th width="100">氏名</th>
+                        <th colspan="2" width="150">資格</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php foreach ($find_tamura as $tamura) : ?>
+                        <tr align="center">
+                            <td><a href="" class="btn first-btn">１</a></td>
+                            <td><a href="" class="btn second-btn">２</a></td>
+                            <td><a href="" class="btn ambulance-btn">救</a></td>
+                            <td><a href="" class="btn go_out-btn">出</a></td>
+                            <td><a href="" class="btn exclusion-btn">休</a></td>
+                            <td><?= h($tamura['Class']) ?></td>
+                            <td><?= h($tamura['Name']) ?></td>
+                            <td><?= h($tamura['Qualification1']) ?></td>
+                            <td><?= h($tamura['Qualification2']) ?></td>
+                        </tr>
+                    <?php endforeach; ?>
+                </tbody>
+            </table>
+        </div>
         <hr>
+        <!-- ここから出向者表示 -->
         <div class="go_out">
             <h2>出向用務</h2>
-
-
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th colspan="5">ボタン</th>
+                        <th width="100">階級</th>
+                        <th width="100">氏名</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php foreach ($find_go_out as $go_out) : ?>
+                        <tr align="center">
+                            <td><a href="" class="btn first-btn">１</a></td>
+                            <td><a href="" class="btn second-btn">２</a></td>
+                            <td><a href="" class="btn ambulance-btn">救</a></td>
+                            <td><a href="" class="btn tamura-btn">田</a></td>
+                            <td><a href="" class="btn exclusion-btn">休</a></td>
+                            <td><?= h($go_out['Class']) ?></td>
+                            <td><?= h($go_out['Name']) ?></td>
+                        </tr>
+                    <?php endforeach; ?>
+                </tbody>
+            </table>
         </div>
         <hr>
+        <!-- ここから休暇等除外者表示 -->
         <div class="exclusion">
             <h2>休暇等除外</h2>
-
-
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th colspan="5">ボタン</th>
+                        <th width="100">階級</th>
+                        <th width="100">氏名</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php foreach ($find_exclusion as $exclusion) : ?>
+                        <tr align="center">
+                            <td><a href="" class="btn first-btn">１</a></td>
+                            <td><a href="" class="btn second-btn">２</a></td>
+                            <td><a href="" class="btn ambulance-btn">救</a></td>
+                            <td><a href="" class="btn tamura-btn">田</a></td>
+                            <td><a href="" class="btn go_out-btn">出</a></td>
+                            <td><?= h($exclusion['Class']) ?></td>
+                            <td><?= h($exclusion['Name']) ?></td>
+                        </tr>
+                    <?php endforeach; ?>
+                </tbody>
+            </table>
         </div>
-        <hr> -->
-        </div>
+        <hr>
+    </div>
 </body>
 
 </html>

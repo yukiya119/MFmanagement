@@ -7,16 +7,16 @@ html{
 }
 body {
     font-family: 'M PLUS 1', sans-serif;
-    /* font-family: 'Noto Sans JP', sans-serif; */
     color: rgb(66, 69, 71);
 }
 h1 {
     color: #ed2222;
+    text-align: center;
     margin-bottom: 50px;
 }
 h2 {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 5px;
 }
 a {
     text-decoration: none;
@@ -27,6 +27,10 @@ ul {
 li {
     margin-bottom: 5px;
     padding: 5px;
+}
+table {
+    margin: 3px auto;
+    /* border-collapse: collapse; */
 }
 .wrapper {
     width: 600px;
@@ -61,40 +65,33 @@ input[type="text"] {
 .btn:hover {
     background-color:#93d8d0;
 }
-.submit-btn,
-.return-btn {
-    width: 100%;
-    margin-top: 20px;
-    padding: 5px 0;
-    letter-spacing: 1.5rem;
-    text-indent: 1.5rem;
-}
-.submit-btn {
-    background-color:#4394eb;
-}
-.return-btn {
-    display: block;
-    background-color:#f5b781;
-}
 .first-btn,
 .second-btn,
 .ambulance-btn,
-.tamura-btn {
+.tamura-btn,
+.go_out-btn,
+.exclusion-btn {
     font-size: 0.9rem;
     margin-right: 3px;
     padding: 5px;
 }
-.fist-btn {
-    background-color: #29cd70;
+.first-btn {
+    background-color: #fe6d49;
 }
 .second-btn {
-    background-color: rgb(47, 147, 240);
+    background-color: rgb(191, 255, 131);
 }
 .ambulance-btn {
-    background-color: #f96262;
+    background-color: rgb(47, 147, 240);
 }
 .tamura-btn {
-    background-color: #88109b;
+    background-color: #be84c7;
+}
+.go_out-btn {
+    background-color: rgb(145, 145, 145);
+}
+.exclusion-btn {
+    background-color: rgb(145, 145, 145);
 }
 .db-connect{
     text-align: right;
@@ -104,6 +101,7 @@ input[type="text"] {
     text-align: right;
     margin: 0 0 0 auto;
     margin-bottom: 10px;
+    color: #4394eb;
     -webkit-animation: blink 1s ease-in-out infinite alternate;
     animation: blink 1s ease-in-out infinite alternate;
 }
@@ -119,48 +117,20 @@ input[type="text"] {
     background-color: #fee9a4;
 }
 .first-unit {
-    /* color: #ed2222; */
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 .second-unit {
-    /* color: #ed2222; */
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 .ambulance-unit {
-    color: #4394eb;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 .tamura-unit {
-    /* color: #f96262; */
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 .go_out {
-    color: aqua;
-    background-color: azure;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 .exclusion {
-    color: #ed2222;
-    background-color: azure;
-    margin-bottom: 50px;
-}
-
-/* タスク一覧画面
------------------------------------*/ */
-
-/* タスク登録フォーム */
-.new-shift {
-    margin-bottom: 60px;
-}
-.done-shift h2 {
-    background: linear-gradient(transparent 70%, #fee9a4 70%);
-}
-
-完了タスク
-.done-shift h2 {
-    margin-top: 30px;
-    margin-bottom: 60px;
-}
-.done-shift h2 {
-    background: linear-gradient(transparent 70%, #edbbfa 70%0);
+    margin-bottom: 20px;
 }
