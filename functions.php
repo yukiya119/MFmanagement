@@ -22,7 +22,7 @@ function h($str)
     return htmlspecialchars($str, ENT_QUOTES, 'UTF-8');
 }
 
-
+// 配置部隊(UNIT)を基に抽出する
 function find_name_by_UNIT($UNIT)
 {
     $dbh = connect_db();

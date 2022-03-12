@@ -59,10 +59,10 @@ $find_exclusion = find_name_by_UNIT(UNIT_EXCLUSION);
             <table border="1">
                 <thead>
                     <tr>
-                        <th colspan="5">ボタン</th>
-                        <th width="100">階級</th>
-                        <th width="100">氏名</th>
-                        <th colspan="2" width="150">資格</th>
+                        <th colspan="5">異動設定</th>
+                        <th width="100">階　級</th>
+                        <th width="120">氏　名</th>
+                        <th colspan="2" width="200">資　格</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -89,16 +89,16 @@ $find_exclusion = find_name_by_UNIT(UNIT_EXCLUSION);
             <table border="1">
                 <thead>
                     <tr>
-                        <th colspan="5">ボタン</th>
-                        <th width="100">階級</th>
-                        <th width="100">氏名</th>
-                        <th colspan="2" width="150">資格</th>
+                        <th colspan="5">異動設定</th>
+                        <th width="100">階　級</th>
+                        <th width="120">氏　名</th>
+                        <th colspan="2" width="200">資　格</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php foreach ($find_second as $second) : ?>
                         <tr align="center">
-                            <td><a href="" class="btn first-btn">１</a></td>
+                            <td><a href="first_unit.php?id" class="btn first-btn">１</a></td>
                             <td><a href="" class="btn ambulance-btn">救</a></td>
                             <td><a href="" class="btn tamura-btn">田</a></td>
                             <td><a href="" class="btn go_out-btn">出</a></td>
@@ -114,15 +114,15 @@ $find_exclusion = find_name_by_UNIT(UNIT_EXCLUSION);
         </div>
         <hr>
         <!-- ここから救急隊表示 -->
-        <div calss="ambulance-unit">
+        <div class="ambulance-unit">
             <h2>救急隊</h2>
             <table border="1">
                 <thead>
                     <tr>
-                        <th colspan="5">ボタン</th>
-                        <th width="100">階級</th>
-                        <th width="100">氏名</th>
-                        <th colspan="2" width="150">資格</th>
+                        <th colspan="5">異動設定</th>
+                        <th width="100">階　級</th>
+                        <th width="120">氏　名</th>
+                        <th colspan="2" width="200">資　格</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -149,10 +149,10 @@ $find_exclusion = find_name_by_UNIT(UNIT_EXCLUSION);
             <table border="1">
                 <thead>
                     <tr>
-                        <th colspan="5">ボタン</th>
-                        <th width="100">階級</th>
-                        <th width="100">氏名</th>
-                        <th colspan="2" width="150">資格</th>
+                        <th colspan="5">異動設定</th>
+                        <th width="100">階　級</th>
+                        <th width="120">氏　名</th>
+                        <th colspan="2" width="200">資　格</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -175,13 +175,13 @@ $find_exclusion = find_name_by_UNIT(UNIT_EXCLUSION);
         <hr>
         <!-- ここから出向者表示 -->
         <div class="go_out">
-            <h2>出向用務</h2>
+            <h2>用務出向</h2>
             <table border="1">
                 <thead>
                     <tr>
-                        <th colspan="5">ボタン</th>
-                        <th width="100">階級</th>
-                        <th width="100">氏名</th>
+                        <th colspan="5">異動設定</th>
+                        <th width="100">階　級</th>
+                        <th width="120">氏　名</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -206,9 +206,9 @@ $find_exclusion = find_name_by_UNIT(UNIT_EXCLUSION);
             <table border="1">
                 <thead>
                     <tr>
-                        <th colspan="5">ボタン</th>
-                        <th width="100">階級</th>
-                        <th width="100">氏名</th>
+                        <th colspan="5">異動設定</th>
+                        <th width="100">階　級</th>
+                        <th width="120">氏　名</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -225,8 +225,8 @@ $find_exclusion = find_name_by_UNIT(UNIT_EXCLUSION);
                     <?php endforeach; ?>
                 </tbody>
             </table>
+            <p><br>※休暇、出張など</p>
         </div>
-        <hr>
     </div>
 </body>
 
