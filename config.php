@@ -8,6 +8,7 @@ define('PASSWORD', '0119');
 
 define('UNIT_FIRST', 'first');
 define('UNIT_SECOND', 'second');
+
 define('UNIT_AMBULANCE', 'ambulance');
 define('UNIT_TAMURA', 'tamura');
 define('UNIT_GO_OUT', 'go_out');

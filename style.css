@@ -6,17 +6,19 @@ html{
     font-size: 100%;
 }
 body {
-    font-family: 'M PLUS 1', sans-serif;
+    font-family: 'DotGothic16', sans-serif;
     color: rgb(66, 69, 71);
 }
 h1 {
     color: #ed2222;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.5);
 }
 h2 {
     text-align: center;
     margin-bottom: 5px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
 }
 a {
     text-decoration: none;
@@ -40,22 +42,7 @@ table {
     border-radius: 20px;
     background-color: #fff7f7;
 }
-.errors {
-    color: #ed2222;
-    background-color: #f0cdcd;
-    list-style: none;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    padding: 10px 20px;
-}
 
-フォーム
-input[type="text"] {
-    border: 2px solid #b8b4b4;
-    border-radius: 3px;
-    width: 100%;
-    padding: 10px;
-}
 ボタン
 .btn {
     color: #fff;
@@ -71,9 +58,11 @@ input[type="text"] {
 .tamura-btn,
 .go_out-btn,
 .exclusion-btn {
-    font-size: 0.9rem;
-    margin-right: 3px;
-    padding: 5px;
+    font-size: 1rem;
+    text-align: center;
+    height: auto;
+    padding: auto;
+    /* box-shadow: 0 3px 0 #a5a5a5; */
 }
 .first-btn {
     background-color: #fe6d49;
@@ -112,9 +101,6 @@ input[type="text"] {
     @keyframes blink {
     0% {opacity: 0;}
     100% {opacity: 1;}
-}
-.member-list {
-    background-color: #fee9a4;
 }
 .first-unit {
     margin-bottom: 20px;
