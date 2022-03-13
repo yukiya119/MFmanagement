@@ -5,20 +5,6 @@ require_once __DIR__ . '/config.php';
 
 $dbh = connect_db();
 
-define('HOSTNAME', 'db');
-define('DATABASE', 'mfm_db');
-define('USERNAME', 'mfm_admin');
-
-try {
-    /// DB接続を試みる
-    $db  = new PDO('mysql:host=' . HOSTNAME . ';dbname=' . DATABASE, USERNAME, PASSWORD);
-    $msg = "■DB接続成功■";
-} catch (PDOException $e) {
-    $isConnect = false;
-    $msg       = "✗DB接続失敗✗<br>(" . $e->getMessage() . ")";
-}
-
-
 //--------------------------------------------------
 // １線隊員の名前を抽出
 $find_first = find_name_by_UNIT(UNIT_FIRST);
@@ -43,23 +29,16 @@ $find_exclusion = find_name_by_UNIT(UNIT_EXCLUSION);
 
 <body>
     <div class="wrapper">
-        <div class="db-connect">
-            《DB接続確認》<br>
-        </div>
-        <div class="db-connect-confirmation">
-            <?php echo $msg; ?>
-        </div>
-        <hr>
         <div class="member-list">
             <h1>【西消防署】隊員編成管理</h1>
         </div>
         <!-- ここから１線隊表示 -->
         <div class="first-unit">
-            <h2>１線隊</h2>
+            <h2>１ 線 隊</h2>
             <table border="1">
                 <thead>
                     <tr>
-                        <th colspan="5">異動設定</th>
+                        <th colspan="5" width="150">異動設定</th>
                         <th width="100">階　級</th>
                         <th width="120">氏　名</th>
                         <th colspan="2" width="200">資　格</th>
@@ -68,11 +47,11 @@ $find_exclusion = find_name_by_UNIT(UNIT_EXCLUSION);
                 <tbody>
                     <?php foreach ($find_first as $first) : ?>
                         <tr align="center">
-                            <td><a href="" class="btn second-btn">２</a></td>
-                            <td><a href="" class="btn ambulance-btn">救</a></td>
-                            <td><a href="" class="btn tamura-btn">田</a></td>
-                            <td><a href="" class="btn go_out-btn">出</a></td>
-                            <td><a href="" class="btn exclusion-btn">休</a></td>
+                            <td><a href="update_second.php?id=<?= h($first['id']) ?>" class="btn second-btn">２</a></td>
+                            <td><a href="update_ambulance.php?id=<?= h($first['id']) ?>" class="btn ambulance-btn">救</a></td>
+                            <td><a href="update_tamura.php?id=<?= h($first['id']) ?>" class="btn tamura-btn">田</a></td>
+                            <td><a href="update_go_out.php?id=<?= h($first['id']) ?>" class="btn go_out-btn">出</a></td>
+                            <td><a href="update_exclusion.php?id=<?= h($first['id']) ?>" class="btn exclusion-btn">休</a></td>
                             <td><?= h($first['Class']) ?></td>
                             <td><?= h($first['Name']) ?></td>
                             <td><?= h($first['Qualification1']) ?></td>
@@ -85,11 +64,11 @@ $find_exclusion = find_name_by_UNIT(UNIT_EXCLUSION);
         <hr>
         <!-- ここから２線隊表示 -->
         <div class="second-unit">
-            <h2>２線隊</h2>
+            <h2>２ 線 隊</h2>
             <table border="1">
                 <thead>
                     <tr>
-                        <th colspan="5">異動設定</th>
+                        <th colspan="5" width="150">異動設定</th>
                         <th width="100">階　級</th>
                         <th width="120">氏　名</th>
                         <th colspan="2" width="200">資　格</th>
@@ -98,11 +77,11 @@ $find_exclusion = find_name_by_UNIT(UNIT_EXCLUSION);
                 <tbody>
                     <?php foreach ($find_second as $second) : ?>
                         <tr align="center">
-                            <td><a href="first_unit.php?id" class="btn first-btn">１</a></td>
-                            <td><a href="" class="btn ambulance-btn">救</a></td>
-                            <td><a href="" class="btn tamura-btn">田</a></td>
-                            <td><a href="" class="btn go_out-btn">出</a></td>
-                            <td><a href="" class="btn exclusion-btn">休</a></td>
+                            <td><a href="update_first.php?id=<?= h($second['id']) ?>" class="btn first-btn">１</a></td>
+                            <td><a href="update_ambulance.php?id=<?= h($second['id']) ?>" class="btn ambulance-btn">救</a></td>
+                            <td><a href="update_tamura.php?id=<?= h($second['id']) ?>" class="btn tamura-btn">田</a></td>
+                            <td><a href="update_go_out.php?id=<?= h($second['id']) ?>" class="btn go_out-btn">出</a></td>
+                            <td><a href="update_exclusion.php?id=<?= h($second['id']) ?>" class="btn exclusion-btn">休</a></td>
                             <td><?= h($second['Class']) ?></td>
                             <td><?= h($second['Name']) ?></td>
                             <td><?= h($second['Qualification1']) ?></td>
@@ -115,11 +94,11 @@ $find_exclusion = find_name_by_UNIT(UNIT_EXCLUSION);
         <hr>
         <!-- ここから救急隊表示 -->
         <div class="ambulance-unit">
-            <h2>救急隊</h2>
+            <h2>救 急 隊</h2>
             <table border="1">
                 <thead>
                     <tr>
-                        <th colspan="5">異動設定</th>
+                        <th colspan="5" width="150">異動設定</th>
                         <th width="100">階　級</th>
                         <th width="120">氏　名</th>
                         <th colspan="2" width="200">資　格</th>
@@ -128,11 +107,11 @@ $find_exclusion = find_name_by_UNIT(UNIT_EXCLUSION);
                 <tbody>
                     <?php foreach ($find_ambulance as $ambulance) : ?>
                         <tr align="center">
-                            <td><a href="" class="btn first-btn">１</a></td>
-                            <td><a href="" class="btn second-btn">２</a></td>
-                            <td><a href="" class="btn tamura-btn">田</a></td>
-                            <td><a href="" class="btn go_out-btn">出</a></td>
-                            <td><a href="" class="btn exclusion-btn">休</a></td>
+                            <td><a href="update_first.php?id=<?= h($ambulance['id']) ?>" class="btn first-btn">１</a></td>
+                            <td><a href="update_second.php?id=<?= h($ambulance['id']) ?>" class="btn second-btn">２</a></td>
+                            <td><a href="update_tamura.php?id=<?= h($ambulance['id']) ?>" class="btn tamura-btn">田</a></td>
+                            <td><a href="update_go_out.php?id=<?= h($ambulance['id']) ?>" class="btn go_out-btn">出</a></td>
+                            <td><a href="update_exclusion.php?id=<?= h($ambulance['id']) ?>" class="btn exclusion-btn">休</a></td>
                             <td><?= h($ambulance['Class']) ?></td>
                             <td><?= h($ambulance['Name']) ?></td>
                             <td><?= h($ambulance['Qualification1']) ?></td>
@@ -149,7 +128,7 @@ $find_exclusion = find_name_by_UNIT(UNIT_EXCLUSION);
             <table border="1">
                 <thead>
                     <tr>
-                        <th colspan="5">異動設定</th>
+                        <th colspan="5" width="150">異動設定</th>
                         <th width="100">階　級</th>
                         <th width="120">氏　名</th>
                         <th colspan="2" width="200">資　格</th>
@@ -158,11 +137,11 @@ $find_exclusion = find_name_by_UNIT(UNIT_EXCLUSION);
                 <tbody>
                     <?php foreach ($find_tamura as $tamura) : ?>
                         <tr align="center">
-                            <td><a href="" class="btn first-btn">１</a></td>
-                            <td><a href="" class="btn second-btn">２</a></td>
-                            <td><a href="" class="btn ambulance-btn">救</a></td>
-                            <td><a href="" class="btn go_out-btn">出</a></td>
-                            <td><a href="" class="btn exclusion-btn">休</a></td>
+                            <td><a href="update_first.php?id=<?= h($tamura['id']) ?>" class="btn first-btn">１</a></td>
+                            <td><a href="update_second.php?id=<?= h($tamura['id']) ?>" class="btn second-btn">２</a></td>
+                            <td><a href="update_ambulance.php?id=<?= h($tamura['id']) ?>" class="btn ambulance-btn">救</a></td>
+                            <td><a href="update_go_out.php?id=<?= h($tamura['id']) ?>" class="btn go_out-btn">出</a></td>
+                            <td><a href="update_exclusion.php?id=<?= h($tamura['id']) ?>" class="btn exclusion-btn">休</a></td>
                             <td><?= h($tamura['Class']) ?></td>
                             <td><?= h($tamura['Name']) ?></td>
                             <td><?= h($tamura['Qualification1']) ?></td>
@@ -179,7 +158,7 @@ $find_exclusion = find_name_by_UNIT(UNIT_EXCLUSION);
             <table border="1">
                 <thead>
                     <tr>
-                        <th colspan="5">異動設定</th>
+                        <th colspan="5" width="150">異動設定</th>
                         <th width="100">階　級</th>
                         <th width="120">氏　名</th>
                     </tr>
@@ -187,11 +166,11 @@ $find_exclusion = find_name_by_UNIT(UNIT_EXCLUSION);
                 <tbody>
                     <?php foreach ($find_go_out as $go_out) : ?>
                         <tr align="center">
-                            <td><a href="" class="btn first-btn">１</a></td>
-                            <td><a href="" class="btn second-btn">２</a></td>
-                            <td><a href="" class="btn ambulance-btn">救</a></td>
-                            <td><a href="" class="btn tamura-btn">田</a></td>
-                            <td><a href="" class="btn exclusion-btn">休</a></td>
+                            <td><a href="update_first.php?id=<?= h($go_out['id']) ?>" class="btn first-btn">１</a></td>
+                            <td><a href="update_second.php?id=<?= h($go_out['id']) ?>" class="btn second-btn">２</a></td>
+                            <td><a href="update_ambulance.php?id=<?= h($go_out['id']) ?>" class="btn ambulance-btn">救</a></td>
+                            <td><a href="update_tamura.php?id=<?= h($go_out['id']) ?>" class="btn tamura-btn">田</a></td>
+                            <td><a href="update_exclusion.php?id=<?= h($go_out['id']) ?>" class="btn exclusion-btn">休</a></td>
                             <td><?= h($go_out['Class']) ?></td>
                             <td><?= h($go_out['Name']) ?></td>
                         </tr>
@@ -206,7 +185,7 @@ $find_exclusion = find_name_by_UNIT(UNIT_EXCLUSION);
             <table border="1">
                 <thead>
                     <tr>
-                        <th colspan="5">異動設定</th>
+                        <th colspan="5" width="150">異動設定</th>
                         <th width="100">階　級</th>
                         <th width="120">氏　名</th>
                     </tr>
@@ -214,11 +193,11 @@ $find_exclusion = find_name_by_UNIT(UNIT_EXCLUSION);
                 <tbody>
                     <?php foreach ($find_exclusion as $exclusion) : ?>
                         <tr align="center">
-                            <td><a href="" class="btn first-btn">１</a></td>
-                            <td><a href="" class="btn second-btn">２</a></td>
-                            <td><a href="" class="btn ambulance-btn">救</a></td>
-                            <td><a href="" class="btn tamura-btn">田</a></td>
-                            <td><a href="" class="btn go_out-btn">出</a></td>
+                            <td><a href="update_first.php?id=<?= h($exclusion['id']) ?>" class="btn first-btn">１</a></td>
+                            <td><a href="update_second.php?id=<?= h($exclusion['id']) ?>" class="btn second-btn">２</a></td>
+                            <td><a href="update_ambulance.php?id=<?= h($exclusion['id']) ?>" class="btn ambulance-btn">救</a></td>
+                            <td><a href="update_tamura.php?id=<?= h($exclusion['id']) ?>" class="btn tamura-btn">田</a></td>
+                            <td><a href="update_go_out.php?id=<?= h($exclusion['id']) ?>" class="btn go_out-btn">出</a></td>
                             <td><?= h($exclusion['Class']) ?></td>
                             <td><?= h($exclusion['Name']) ?></td>
                         </tr>

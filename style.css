@@ -12,7 +12,7 @@ body {
 h1 {
     color: #ed2222;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
     text-shadow: 2px 2px 3px rgba(0,0,0,0.5);
 }
 h2 {
@@ -62,7 +62,7 @@ table {
     text-align: center;
     height: auto;
     padding: auto;
-    box-shadow: 0 3px 0 #a5a5a5;
+    /* box-shadow: 0 3px 0 #a5a5a5; */
 }
 .first-btn {
     background-color: #fe6d49;
@@ -101,9 +101,6 @@ table {
     @keyframes blink {
     0% {opacity: 0;}
     100% {opacity: 1;}
-}
-.member-list {
-    background-color: #fee9a4;
 }
 .first-unit {
     margin-bottom: 20px;
