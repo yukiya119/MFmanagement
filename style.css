@@ -32,7 +32,7 @@ li {
 }
 table {
     margin: 3px auto;
-    /* border-collapse: collapse; */
+    border: inset 6px #999999;
 }
 .wrapper {
     width: 600px;
